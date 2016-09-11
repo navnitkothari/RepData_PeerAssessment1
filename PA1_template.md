@@ -1,22 +1,9 @@
 
 
 ```r
----
-title: "Reproducible Research: Peer Assessment 1"
-author: "Navneet Kothari"
-output:
-keep_md: true
----
-
+# "Reproducible Research: Peer Assessment 1"
 
 ## Loading and preprocessing the data
-```
-
-```
-## Error: <text>:10:0: unexpected end of input
-## 8: 
-## 9: ## Loading and preprocessing the data
-##   ^
 ```
 
 ```r

@@ -1,12 +1,4 @@
-
-```{r }
----
-title: "Reproducible Research: Peer Assessment 1"
-author: "Navneet Kothari"
-output:
-keep_md: true
----
-
+# Reproducible Research: Peer Assessment 1
 
 ## Loading and preprocessing the data
 ```{r}
@@ -135,6 +127,5 @@ ggplot(data = avg_pattern, aes(x = interval, y = steps)) +
     ylab("Average Number of Steps") +
     ggtitle("Average Weekend / Weekday Activity Pattern")
 ```
+  
 There are differences in the activity patterns between weekdays and weekends. Though the highest peak is in the weekday graph but the overall average above 100 is higher for weekends.
-```
-
