@@ -3,8 +3,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 author: "Navneet Kothari"
-output: 
-html_document:
+output:
 keep_md: true
 ---
 

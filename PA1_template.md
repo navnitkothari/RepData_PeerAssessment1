@@ -4,8 +4,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 author: "Navneet Kothari"
-output: 
-html_document:
+output:
 keep_md: true
 ---
 
@@ -14,10 +13,10 @@ keep_md: true
 ```
 
 ```
-## Error: <text>:11:0: unexpected end of input
-## 9: 
-## 10: ## Loading and preprocessing the data
-##    ^
+## Error: <text>:10:0: unexpected end of input
+## 8: 
+## 9: ## Loading and preprocessing the data
+##   ^
 ```
 
 ```r
@@ -36,15 +35,6 @@ unzip(zipfile = "activity.zip")
 
 ```r
 activity <- read.csv("activity.csv")
-```
-
-```
-## Warning in file(file, "rt"): cannot open file 'activity.csv': No such file
-## or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
 ```
 
 ## What is mean total number of steps taken per day?
