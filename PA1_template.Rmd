@@ -1,3 +1,4 @@
+  
 # Reproducible Research: Peer Assessment 1
 
 ## Loading and preprocessing the data
@@ -27,6 +28,7 @@ hist(total_steps_per_day$steps, col = "indianred", breaks = 25,
       ylab = "Frequency",
       main = "Histogram of Total Steps per Day")
 ```
+  
 The mean and median of the total number of steps taken per day is `r total_steps_mean` and `r total_steps_median` respectively.
 
 
@@ -50,6 +52,7 @@ ggplot(data = avg_daily_pattern, aes(x = interval, y = steps)) +
 ```{r}
 max_steps <- avg_daily_pattern[which.max(avg_daily_pattern$steps), ] 
 ```
+  
 The 5-minute interval containing the maximum number of steps is `r max_steps$interval` with `r max_steps$steps`.
 
 
@@ -59,6 +62,7 @@ The 5-minute interval containing the maximum number of steps is `r max_steps$int
 ```{r}
 missing_values <- sum(is.na(activity$steps))
 ```
+  
 The total number of missing values in the dataset is `r missing_values`
 
 ### Devising a strategy for filling in all of the missing values in the dataset and creating a new dataset that is equal to the original dataset but with the missing data filled in
@@ -90,11 +94,11 @@ hist(new_total_steps$steps, col = "lightgreen", breaks = 25,
 ### Do these values differ from the estimates from the first part of the assignment?
 The values differ but only slightly.
 
-Mean(without missing values) = `r total_steps_mean`
-Mean(with missing values) = `r new_total_steps_mean`
+Mean(without missing values) = `r total_steps_mean`  
+Mean(with missing values) = `r new_total_steps_mean`  
 
-Median(without missing values) = `r total_steps_median`
-Median(without missing values) = `r new_total_steps_median`
+Median(without missing values) = `r total_steps_median`  
+Median(without missing values) = `r new_total_steps_median`  
 
 ### What is the impact of imputing missing data on the estimates of the total daily number of steps?
 As shown above, comparing with the calculations, we observe that while the mean value remains unchanged, the median value has shifted slightly.
@@ -128,4 +132,5 @@ ggplot(data = avg_pattern, aes(x = interval, y = steps)) +
     ggtitle("Average Weekend / Weekday Activity Pattern")
 ```
   
-There are differences in the activity patterns between weekdays and weekends. Though the highest peak is in the weekday graph but the overall average above 100 is higher for weekends.
+There are differences in the activity patterns between weekdays and weekends.  
+Though the highest peak is in the weekday graph but the overall average above 100 is higher for weekends.

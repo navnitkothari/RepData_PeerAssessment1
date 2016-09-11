@@ -1,10 +1,7 @@
-
-
-```r
-# "Reproducible Research: Peer Assessment 1"
+  
+# Reproducible Research: Peer Assessment 1
 
 ## Loading and preprocessing the data
-```
 
 ```r
 library(ggplot2)
@@ -13,14 +10,6 @@ library(knitr)
 opts_chunk$set(echo = TRUE)
 
 unzip(zipfile = "activity.zip")
-```
-
-```
-## Warning in unzip(zipfile = "activity.zip"): error 1 in extracting from zip
-## file
-```
-
-```r
 activity <- read.csv("activity.csv")
 ```
 
@@ -43,7 +32,8 @@ hist(total_steps_per_day$steps, col = "indianred", breaks = 25,
       main = "Histogram of Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+  
 The mean and median of the total number of steps taken per day is 1.0766189 &times; 10<sup>4</sup> and 10765 respectively.
 
 
@@ -65,13 +55,14 @@ ggplot(data = avg_daily_pattern, aes(x = interval, y = steps)) +
     ggtitle("Average Daily Activity Pattern")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 ### Calculating the 5-minute interval on average across all the days containing the maximum number of steps
 
 ```r
 max_steps <- avg_daily_pattern[which.max(avg_daily_pattern$steps), ] 
 ```
+  
 The 5-minute interval containing the maximum number of steps is 835 with 206.1698113.
 
 
@@ -82,6 +73,7 @@ The 5-minute interval containing the maximum number of steps is 835 with 206.169
 ```r
 missing_values <- sum(is.na(activity$steps))
 ```
+  
 The total number of missing values in the dataset is 2304
 
 ### Devising a strategy for filling in all of the missing values in the dataset and creating a new dataset that is equal to the original dataset but with the missing data filled in
@@ -112,16 +104,16 @@ hist(new_total_steps$steps, col = "lightgreen", breaks = 25,
       main = "Histogram of Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
 
 ### Do these values differ from the estimates from the first part of the assignment?
 The values differ but only slightly.
 
-Mean(without missing values) = 1.0766189 &times; 10<sup>4</sup>
-Mean(with missing values) = 1.0766189 &times; 10<sup>4</sup>
+Mean(without missing values) = 1.0766189 &times; 10<sup>4</sup>  
+Mean(with missing values) = 1.0766189 &times; 10<sup>4</sup>  
 
-Median(without missing values) = 10765
-Median(without missing values) = 1.0766189 &times; 10<sup>4</sup>
+Median(without missing values) = 10765  
+Median(without missing values) = 1.0766189 &times; 10<sup>4</sup>  
 
 ### What is the impact of imputing missing data on the estimates of the total daily number of steps?
 As shown above, comparing with the calculations, we observe that while the mean value remains unchanged, the median value has shifted slightly.
@@ -157,7 +149,7 @@ ggplot(data = avg_pattern, aes(x = interval, y = steps)) +
     ggtitle("Average Weekend / Weekday Activity Pattern")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
-There are differences in the activity patterns between weekdays and weekends. Though the highest peak is in the weekday graph but the overall average above 100 is higher for weekends.
-```
-
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+  
+There are differences in the activity patterns between weekdays and weekends.  
+Though the highest peak is in the weekday graph but the overall average above 100 is higher for weekends.
